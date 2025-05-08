@@ -1,0 +1,23 @@
+COMPANY : CODTECH IT SOLUTIONS
+
+NAME : P HARSHITHA
+
+INTERN ID : CT04DK148
+
+DOMAIN : Java Programming
+
+DURATION : April15th, 2025 to May 15th, 2025.
+
+MENTOR : NEELA SANTOSH KUMAR
+
+DESCRIPTION
+
+This project involves building a multithreaded client-server chat application using Java sockets and multithreading to enable real-time communication among multiple users. The primary goal is to create a fully functional chat system in which multiple clients can connect to a central server, send messages, and receive messages from other connected users simultaneously. This is accomplished through the use of Java’s networking and concurrency APIs, specifically by utilizing sockets for network communication and threads to manage concurrent connections. The server component is responsible for listening to incoming client connections, managing connected users, and broadcasting messages to all active clients. Each time a client connects, the server spawns a new thread dedicated to handling the communication with that specific client, allowing the server to support multiple users concurrently without blocking other connections. This multithreaded design ensures that each user can interact with the server independently, enabling real-time, bidirectional messaging between users.
+
+The client component of the application includes a user interface, typically console-based or simple GUI, where users can input their messages and view incoming messages from others. Upon launching, a client connects to the server using a specified IP address and port number. Once connected, the client enters a loop that handles both sending user input to the server and listening for incoming messages from the server. To achieve this, the client may also use separate threads—one for sending messages and another for receiving—to ensure that the user interface remains responsive and messages are received promptly. This separation of concerns allows users to continue typing and sending messages while still receiving real-time updates from others in the chat room.
+
+The core of the application lies in the efficient use of Java sockets, which provide a reliable communication channel between the client and server. The ServerSocket class is used on the server side to accept incoming client connections, while the Socket class is used by both server and clients to read and write data over the network. Input and output streams (InputStream, OutputStream, BufferedReader, PrintWriter, etc.) are used to handle the transmission of messages. Proper synchronization and thread management are crucial, especially on the server side, to handle shared resources and prevent issues like race conditions or inconsistent message delivery.
+
+Robust error handling is also incorporated to manage common issues such as client disconnections, server shutdowns, or unexpected network failures. The application ensures that users are notified when connections are lost and provides mechanisms to gracefully close sockets and threads to avoid resource leaks.
+
+The final deliverable is a fully functional Java chat application consisting of two main components: the server program that supports multiple simultaneous connections through multithreading, and the client program that connects to the server and facilitates real-time communication. This project is a practical demonstration of how Java’s socket programming and threading capabilities can be used to build scalable, real-time communication systems. It serves as a strong foundation for learning about networking, concurrency, and client-server architecture in software development.
